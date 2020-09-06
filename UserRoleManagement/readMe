@@ -1,0 +1,48 @@
+ # Build and deploy procedure:
+
+http://localhost:8080/
+
+Build Tool : Maven 3
+FrameWork : Spring Boot
+Server : InBuild Spring Boot Server
+Java : 7
+
+
+-- Write data from to CSV
+url: http://localhost:8080/addUserData
+Request : [{"id":1,"name":"Ram","designation":"Emp","permission":"Admin"}]
+Header : Content-Type = application/json
+Type : Post
+
+-- Get User data from CSV
+url: http://localhost:8080/userList
+Type : Get
+
+-- Get user role data
+http://localhost:8080/user?id=5
+Type : Get
+
+
+ # Functionalities chosen to implement:
+CRUD operation on CSV
+Rest mapping 
+Output in Log files 
+
+
+ # Functionalities are implemented and what are the main challenges that you took into account when performing the implementation 
+ (business reasons, technical and infrastructure reasons, etc)
+- Used Apache CSV for services to work on CSV with common approach  
+- Used Spring boot due to its easy configuration and in build server for checking local changes 
+- Maven project build to easily add and update jars
+
+
+ # Functionalities that could be added in the future to the application in order to make it more attractive to potential clients
+- Adding data to database using Spring Repo
+- Adding authentication from accessing to doing operation in CSV
+- Storing such CSV files to AWS EC cloud for easy storage
+- Rest URLs authentication
+- Global and service level exception handling 
+
+
+
+
